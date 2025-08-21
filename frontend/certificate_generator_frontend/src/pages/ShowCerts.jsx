@@ -37,6 +37,7 @@ export default function ShowCert() {
           <a
             href={certificateUrl}
             download
+            target="_blank"
             className="bg-[#008DC3] text-white font-semibold py-3 px-8 rounded-md hover:bg-[#0071A0] transition w-[200px] text-center self-center"
           >
             تحميل الشهادة

@@ -18,25 +18,7 @@ A simple web application for managing training certificates. It allows automatic
 
 ## 🏗️ Project Structure
 
-project-root/
-│── backend/
-│ ├── models/ # Employee, Training, Certificate
-│ ├── routes/ # employees.js, trainings.js,   
-│ ├── uploads/ # Temporary Excel and logo files
-│ ├── index.js # Backend entry point
-│ └── package.json
-│
-│── frontend/
-│ ├── src/
-│ │ ├── components/ # Forms, Tables, Certificate Viewer
-│ │ ├── pages/ # Home, Upload, Certificates List
-│ │ ├── services/ # API calls via Axios
-│ │ └── App.jsx
-│ ├── tailwind.config.js
-│ ├── package.json
-│ └── vite.config.js
-│
-│── README.md
+
 
 ---
 

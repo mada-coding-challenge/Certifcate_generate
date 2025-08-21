@@ -12,37 +12,9 @@ export default function App() {
   return (
     <div className="min-h-screen bg-base-200">
       <header className="shadow-sm bg-white">
-        {/* <div className="max-w-5xl mx-auto px-4 py-3 flex items-center gap-4">
-          <div className="font-bold text-lg">Certificates Admin</div>
-          <nav className="ml-auto flex gap-2"> */}
+       
             <Navbar />
-            {/* <NavLink
-              to="/"
-              end
-              className={({ isActive }) =>
-                `btn btn-ghost ${isActive ? "btn-active" : ""}`
-              }
-            >
-              إنشاء الشهادات
-            </NavLink>
-            <NavLink
-              to="/uploadCsv"
-              className={({ isActive }) =>
-                `btn btn-ghost ${isActive ? "btn-active" : ""}`
-              }
-            >
-              رفع البيانات
-            </NavLink>
-            <NavLink
-              to="/certificates"
-              className={({ isActive }) =>
-                `btn btn-ghost ${isActive ? "btn-active" : ""}`
-              }
-            >
-              الشهادات الصادرة
-            </NavLink> */}
-          {/* </nav>
-        </div> */}
+          
       </header>
 
       <main className="max-w-5xl mx-auto p-4 pt-20 font-gedinar min-h-[90vh]">
