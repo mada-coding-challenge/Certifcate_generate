@@ -11,7 +11,7 @@ export default defineConfig({
   server: {
     proxy: {
       '/api': {
-        target: 'https://certifcate-generate-backend.onrender.com/',
+        target: 'https://certifcate-generate-backend.onrender.com',
         changeOrigin: true,
       }
     }
