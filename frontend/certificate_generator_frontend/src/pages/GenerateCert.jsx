@@ -178,9 +178,9 @@
 //         </form>
 //         <p className="mt-4 text-sm text-gray-600">
 //           أو استخدم
-         
+
 //             رفع جماعي
-         
+
 //           لتحميل ملف Excel يحتوي على عدة صفوف.
 //         </p>
 //         <UploadData />
@@ -225,22 +225,22 @@ export default function GenerateCert() {
       setLoading(true);
       const { data } = await api.post("/api/certificates", fd, {
         headers: { "Content-Type": "multipart/form-data" },
-        onUploadProgress: (progressEvent) => {
+        onUploadProgress: progressEvent => {
           if (progressEvent.total) {
             const percent = Math.round(
               (progressEvent.loaded * 100) / progressEvent.total
             );
             setProgress(percent);
           }
-        },
+        }
       });
 
       // بعد النجاح، توجه لصفحة ShowCert
       navigate("/show-cert", {
         state: {
           certificateUrl: data.certificate.fileUrl,
-          date: data.certificate.date,
-        },
+          date: data.certificate.date
+        }
       });
     } catch (err) {
       setError(err.message || "فشل إنشاء الشهادة");
@@ -255,7 +255,7 @@ export default function GenerateCert() {
       try {
         const [eRes, tRes] = await Promise.all([
           api.get("/api/employees"),
-          api.get("/api/trainings"),
+          api.get("/api/trainings")
         ]);
         setEmployees(eRes.data || []);
         setTrainings(tRes.data || []);
@@ -279,14 +279,14 @@ export default function GenerateCert() {
               items={employees}
               displayKey="name"
               placeholder="اكتب الاسم..."
-              onSelect={(it) => setEmployeeId(it._id)}
+              onSelect={it => setEmployeeId(it._id)}
             />
             <Autocomplete
               label="الدورة"
               items={trainings}
               displayKey="title"
               placeholder="اكتب العنوان..."
-              onSelect={(it) => setTrainingId(it._id)}
+              onSelect={it => setTrainingId(it._id)}
             />
           </div>
 
@@ -297,7 +297,7 @@ export default function GenerateCert() {
                 type="date"
                 className="input input-bordered w-full rounded-md border border-[#e0e0e0] py-2 px-7 text-base font-medium text-[#07074D] cursor-pointer"
                 value={date}
-                onChange={(e) => setDate(e.target.value)}
+                onChange={e => setDate(e.target.value)}
               />
             </div>
 
@@ -306,7 +306,7 @@ export default function GenerateCert() {
               <input
                 type="file"
                 accept="image/*"
-                onChange={(e) => setLogo(e.target.files[0] || null)}
+                onChange={e => setLogo(e.target.files[0] || null)}
                 className="file-input file-input-bordered w-full rounded-md border border-[#e0e0e0] py-2 px-7 text-base font-medium text-[#07074D] cursor-pointer"
               />
             </div>

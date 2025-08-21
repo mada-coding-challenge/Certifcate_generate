@@ -33,7 +33,7 @@ const fonts = {
 function fixArabicText(text) {
     if (!text) return text;
     const words = text.trim().split(/\s+/);
-    text = words[1] + "  " + words[0];
+    text = words.reverse().join("  ");
     return text;
 
 }
