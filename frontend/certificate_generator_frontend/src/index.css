@@ -1,0 +1,23 @@
+@import "tailwindcss";
+
+
+@font-face {
+  font-family: 'GE Dinar One Light';
+  src: url('../public/fonts/GE_Dinar_One_Light.ttf') format('truetype') !important;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GE Dinar One';
+  src: url('../public/fonts/ge-dinarone-bold_8.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  font-family: 'GE Dinar One Light' !important;
+}
