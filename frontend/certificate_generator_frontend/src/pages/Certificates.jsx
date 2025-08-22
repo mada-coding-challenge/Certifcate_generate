@@ -12,7 +12,7 @@ export default function Certificates() {
     (async () => {
       try {
         setLoading(true);
-        const { data } = await api.get("/api/certificates");
+        const { data } = await api.get("https://certifcate-generate-iyfp.onrender.com/api/certificates");
         setItems(data || []);
       } catch (err) {
         console.error(err);
