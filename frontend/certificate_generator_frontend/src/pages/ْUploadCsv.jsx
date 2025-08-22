@@ -161,8 +161,8 @@ export default function UploadCsv() {
     async function fetchData() {
       try {
         const [tRes, eRes] = await Promise.all([
-          api.get("/api/trainings"),
-          api.get("/api/employees")
+          api.get("https://certifcate-generate-iyfp.onrender.com/api/trainings"),
+          api.get("https://certifcate-generate-iyfp.onrender.com/api/employees")
         ]);
         setTrainings(tRes.data);
         setEmployees(eRes.data);

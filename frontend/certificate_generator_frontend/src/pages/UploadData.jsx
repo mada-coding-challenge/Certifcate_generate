@@ -23,7 +23,7 @@ export default function UploadData() {
     try {
       setLoading(true);
       const { data } = await api.post(
-        "/api/certificates/upload-certificates",
+        "https://certifcate-generate-iyfp.onrender.com/api/certificates/upload-certificates",
         fd,
         {
           headers: { "Content-Type": "multipart/form-data" }
